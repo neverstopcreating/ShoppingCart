@@ -1,0 +1,6 @@
+.Cart {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1280px;
+}
+

@@ -1,0 +1,7 @@
+.counter-buttons {
+    display: flex;
+}
+
+.increment, .decrement {
+    margin: 15px;
+}
