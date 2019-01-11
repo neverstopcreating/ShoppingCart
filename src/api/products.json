@@ -1,18 +1,18 @@
 [
   {
-    "id": 1,
+    "id": "grapefruit",
     "name": "Grapefruit",
     "price": 1.00,
     "picture": ""
   },
   {
-    "id": 2,
+    "id": "apple",
     "name": "Apple",
     "price": 0.7,
     "picture": ""
   },
   {
-    "id": 3,
+    "id": "kiwi",
     "name": "Kiwi",
     "price": 1.50,
     "picture": ""
