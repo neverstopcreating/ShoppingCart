@@ -1,8 +1,6 @@
 import {SET_PRODUCT_COUNT} from "../constants/ActionType";
 
 import products from '../api/products'
-import {setProductCount} from "../actions";
-
 
 
 const initialState = {
@@ -13,11 +11,14 @@ const initialState = {
 export default function (state = initialState, action) {
     switch (action.type) {
         case SET_PRODUCT_COUNT:
-        // do stuff
-
-            return Object.assign({}, state, {
-                cart: setProductCount.count
-            });
+            console.log(action);
+            return {
+                ...state,
+                cart: {
+                    ...state.cart,
+                    [action.payload.id]: action.payload.count
+                }
+            };
 
         default:
             return state;
