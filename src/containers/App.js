@@ -5,18 +5,14 @@ import './App.css';
 import ProductList from "../containers/productList";
 import Cart from "../containers/cart";
 
-
-// const products = Array(5)
-//     .fill('')
-//     .map((_, index) => ({id: index, name: `Item ${index}`, count: 0, price: index * 10}));
-
-
 class App extends Component {
     render() {
         return (
             <div className="App">
                 <div className="Cart">
-                    <Cart products={this.props.products}/>
+                    <Cart
+                        products={this.props.products}
+                        cart={this.props.cart}/>
                 </div>
                 <ProductList products={this.props.products}/>
             </div>
@@ -25,7 +21,10 @@ class App extends Component {
 }
 
 const mapStateToProps = state => ({
-    products: state.products
-})
+    products: state.products,
+    cart: state.cart
+
+});
 
 export default connect(mapStateToProps)(App);
+

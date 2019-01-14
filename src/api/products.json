@@ -1,19 +1,19 @@
 [
   {
-    "id": "grapefruit",
-    "name": "Grapefruit",
+    "id": "Grapefruit",
+    "name": "grapefruit",
     "price": 1.00,
     "picture": ""
   },
   {
-    "id": "apple",
-    "name": "Apple",
+    "id": "Apple",
+    "name": "apple",
     "price": 0.7,
     "picture": ""
   },
   {
-    "id": "kiwi",
-    "name": "Kiwi",
+    "id": "Kiwi",
+    "name": "kiwi",
     "price": 1.50,
     "picture": ""
   }
