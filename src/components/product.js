@@ -18,6 +18,7 @@ function Product({setProductCount, product, count}) {
     )
 }
 
+// connects new state with the props
 function mapStateToProps(state, ownProps) {
     return {
         product: ownProps.product,
@@ -25,6 +26,8 @@ function mapStateToProps(state, ownProps) {
     };
 }
 
+// describes and action of what needs to be connected to what
 const mapDispatchToProps = {setProductCount};
 
+// shows things that need to be done and what with it needs to be done
 export default connect(mapStateToProps, mapDispatchToProps)(Product);

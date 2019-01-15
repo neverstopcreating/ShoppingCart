@@ -17,9 +17,10 @@ function Cart(props) {
     console.log('total', total);
 
 
+
     return (
         <div className="cart">
-            <span>Total {total} </span>
+            <span>Total {total.toFixed(2)} </span>
         </div>
     )
 }
