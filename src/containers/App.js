@@ -20,6 +20,9 @@ class App extends Component {
     }
 }
 
+
+//Helps cart to see changing props for product and cart(count).Could be also added to the cart.js itself.
+// Works together with products=... cart=... in <Cart/>
 const mapStateToProps = state => ({
     products: state.products,
     cart: state.cart
