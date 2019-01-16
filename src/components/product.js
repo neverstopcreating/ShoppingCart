@@ -7,6 +7,7 @@ import connect from "react-redux/es/connect/connect";
 function Product({setProductCount, product, count}) {
     return (
         <div className="product">
+            <img src={product.picture} alt={product.name} width="100" height="90"/>
             <span>{product.id} - {product.price}£</span>
             <Counter
                 count={count}
