@@ -1,5 +1,6 @@
 import React from 'react';
 import "./cart.css";
+import Product from "../components/product";
 
 
 function Cart(props) {
@@ -14,12 +15,22 @@ function Cart(props) {
         total = total + (p.price * countOfProductInCart);
     });
 
-    console.log('total', total);
+
+
+ function checker(props) {
+     let a = [];
+     if (props.cart === 0) {
+let productsToShow =
+     }
+ }
+
+
 
 
 
     return (
         <div className="cart">
+            <div className='products-in-cart'></div>
             <span>Total {total.toFixed(2)} </span>
         </div>
     )
