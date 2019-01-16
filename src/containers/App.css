@@ -4,3 +4,7 @@
     max-width: 1280px;
 }
 
+.App {
+    background-image: url("fruit-background.jpg");
+    background-size: cover;
+}

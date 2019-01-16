@@ -1,10 +1,8 @@
 import React from 'react';
 import "./cart.css";
-import Product from "../components/product";
 
 
 function Cart(props) {
-    console.log('In the cart component', props.products, props.cart);
 
     let total = 0;
 
@@ -15,23 +13,21 @@ function Cart(props) {
         total = total + (p.price * countOfProductInCart);
     });
 
-
-
- function checker(props) {
-     let a = [];
-     if (props.cart === 0) {
-let productsToShow =
-     }
- }
-
-
-
-
+    const productList = Object.keys(props.cart).map((productId) => {
+        const product = props.products.find((p) => p.id === productId);
+        const countOfProductInCart = props.cart[productId];
+        const productTotal = product.price * countOfProductInCart;
+        // if product is not in cart,it disappears
+        if (!countOfProductInCart) {
+            return null;
+        }
+        return <div key={productId}>{product.name} - {productTotal.toFixed(2)}</div>;
+    });
 
     return (
         <div className="cart">
-            <div className='products-in-cart'></div>
-            <span>Total {total.toFixed(2)} </span>
+            <div className='products-in-cart'>{productList}</div>
+            <span><b>Total {total.toFixed(2)} </b></span>
         </div>
     )
 }

@@ -3,19 +3,19 @@
     "id": "Grapefruit",
     "name": "grapefruit",
     "price": 1.00,
-    "picture": ""
+    "picture": "grapefruit_large.png"
   },
   {
     "id": "Apple",
     "name": "apple",
     "price": 0.7,
-    "picture": ""
+    "picture": "apple-7.jpg"
   },
   {
     "id": "Kiwi",
     "name": "kiwi",
     "price": 1.50,
-    "picture": ""
+    "picture": "kiwi.jpg"
   }
 ]
 

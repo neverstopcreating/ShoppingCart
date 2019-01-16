@@ -4,5 +4,11 @@
     border-style: solid;
     border-width: 3px;
     border-color: #282c34;
-    display: flex;
+    color: #211e18;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 20px;
+}
+
+.products-in-cart {
+    margin: 15px;
 }
