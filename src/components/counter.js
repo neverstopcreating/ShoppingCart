@@ -17,4 +17,4 @@ function Counter({count, increment, decrement}) {
     </div>;
 }
 
-export default Counter;
+export default Counter

@@ -1,5 +1,7 @@
 import React from 'react';
 import "./cart.css";
+import {setProductCount} from "../actions";
+import connect from "react-redux/es/connect/connect";
 
 
 function Cart(props) {
@@ -8,8 +10,6 @@ function Cart(props) {
 
     props.products.forEach(p => {
         let countOfProductInCart = props.cart[p.id] || 0;
-        console.log(p, p.price, countOfProductInCart);
-
         total = total + (p.price * countOfProductInCart);
     });
 
@@ -21,7 +21,15 @@ function Cart(props) {
         if (!countOfProductInCart) {
             return null;
         }
-        return <div key={productId}>{product.name} - {productTotal.toFixed(2)}</div>;
+        return <div key={productId}>
+
+
+            <button
+                onClick={() => props.setProductCount(product.id, 0)}>x
+            </button>
+
+            <span>{product.name} - {productTotal.toFixed(2)}</span>
+        </div>;
     });
 
     return (
@@ -32,4 +40,14 @@ function Cart(props) {
     )
 }
 
-export default Cart;
+function mapStateToProps(state, ownProps) {
+    return {
+        product: ownProps.product,
+        count: state.cart
+    };
+}
+
+const mapDispatchToProps = {setProductCount};
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cart);
