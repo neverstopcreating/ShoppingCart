@@ -1,4 +1,1 @@
 export const SET_PRODUCT_COUNT = 'SET_PRODUCT_COUNT';
-export const RECEIVE_PRODUCTS = 'RECEIVE_PRODUCTS';
-export const INCREMENT = 'INCREMENT';
-export const DECREMENT = 'DECREMENT';

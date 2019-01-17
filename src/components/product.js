@@ -12,7 +12,7 @@ function Product({setProductCount, product, count}) {
             <Counter
                 count={count}
                 increment={() => setProductCount(product.id, count + 1)}
-                decrement={() => setProductCount(product.id, count - 1)}
+                decrement={() => setProductCount(product.i.d, count - 1)}
             />
             <span>Total {(count * product.price).toFixed(2)}£</span>
         </div>
